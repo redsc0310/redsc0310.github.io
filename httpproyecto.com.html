@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html><html lang="es"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Dr. César Rodríguez</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #c8102e; /* Rojo */
+            color: #ffffff;
+            padding: 20px 60px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header img {
+            max-width: 100px; /* Aumenta el tamaño del logo */
+            height: auto; /* Mantiene la proporción */
+        }
+        h1 {
+            margin: 0; /* Eliminar margen del h1 */
+            flex: 1; /* Permitir que el texto ocupe el espacio restante */
+            text-align: center; /* Centrar el texto */
+        }
+        nav {
+            margin: 20px ;
+            text-align: center;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #ffffff;
+            color: #c8102e;
+            border: 2px solid #c8102e;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav button:hover {
+            background: #c8102e;
+            color: #ffffff;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            background: #ffffff;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #c8102e;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .location-images {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .location-images img {
+            margin: 10px;
+            border: 1px solid #c8102e;
+            border-radius: 5px;
+        }
+        .login {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .edit-area {
+            margin-top: 20px;
+        }
+        .edit-area input, .edit-area textarea {
+            width: 80%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #c8102e;
+            border-radius: 5px;
+        }
+        .edit-area button {
+            padding: 10px 15px;
+            background: #c8102e;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .edit-area button:hover {
+            background: #a70f24;
+        }
+        #login-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="ivss.png" alt="Logo del Hospital"> <!-- Cambia "logo.png" por la ruta de tu logo -->
+        <h1>Hospital Dr. César Rodríguez</h1>
+    </header>
+    <nav>
+        <button onclick="showSection('inicio')">Inicio</button>
+        <button onclick="showSection('servicios')">Servicios</button>
+        <button onclick="showSection('contacto')">Contacto</button>
+        <button onclick="showSection('grupos')">Grupos de Apoyo</button>
+        <button onclick="showLogin()">Iniciar Sesión</button>
+    </nav>
+    
+    <section id="inicio">
+       <h2 style="text-align: center;">Reseña Histórica</h2>
+<p id="historical-review" style="text-align: justify;">
+    La historia del hospital se remonta a su fundación por la Mene Grande Oil Company en Barcelona, bajo la dirección del Dr. Gualberto Rossi. El 18 de octubre de 1944, se trasladó a un nuevo edificio en el Campo Guaraguao de Puerto La Cruz, donde el Dr. Felipe Iriarte asumió la dirección y la Sra. Josefina Zabala lideró el equipo de enfermería. En 1965, se estableció el Seguro Social en Anzoátegui, convirtiéndose en el primer hospital del Instituto Venezolano de los Seguros Sociales en la región, gracias a las donaciones de Mene Grande Oil Company y el compromiso de integrar parte de su personal. Inicialmente, contaba con sesenta camas, pero con el tiempo se expandió a doscientas, adaptándose a las crecientes demandas de atención médica.
+
+    A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en la atención que brinda, desarrollando un programa integral que involucra a pacientes, familias y la comunidad. En 1983, se renombró en honor al Dr. César Rodríguez Rodríguez, un destacado médico cirujano oriundo de Anzoátegui. En sus inicios, el centro ofrecía solo un número limitado de especialidades médicas y carecía de equipos avanzados, con el personal médico y de enfermería luchando para salvar vidas en condiciones difíciles. Aunque no contaba con unidades de terapia intensiva, la dedicación del equipo permitía que muchos pacientes se recuperaran gracias a su esfuerzo y compromiso.
+</p>
+        
+        <h3 style="text-align: center;">Ubicación</h3>
+        <div class="location-images">
+            <img src="ubicacion1.jpg" alt="Ubicación 1" style="width: 200px; height: auto;">
+            <img src="ubicacion2.jpg" alt="Ubicación 2" style="width: 200px; height: auto;">
+            <img src="ubicacion3.jpg" alt="Ubicación 3" style="width: 200px; height: auto;">
+        </div>
+    </section>
+    
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <p id="services-info">Ofrecemos una amplia gama de servicios médicos, incluyendo:</p>
+        <ul id="services-list">
+            <li>Urgencias</li>
+            <li>Pediatría</li>
+            <li>Ginecología</li>
+            <li>Cirugía General</li>
+            <li>Psicología</li>
+        </ul>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p id="contact-info">Para más información, contáctanos al siguiente número:</p>
+        <p><strong>Teléfono:</strong> (123) 456-7890</p>
+        <p><strong>Email:</strong> contacto@hospitalcesarrodguez.com</p>
+    </section>
+    
+    <section id="grupos">
+        <h2>Grupos de Apoyo</h2>
+        <p id="groups-info">Contamos con grupos de apoyo para diversas necesidades, incluyendo:</p>
+        <ul id="groups-list">
+            <li>Apoyo psicológico</li>
+            <li>Grupos de pacientes crónicos</li>
+            <li>Asesoramiento familiar</li>
+        </ul>
+    </section>
+    
+    <div class="login" id="login">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Entrar</button>
+        <p id="login-message" class="hidden"></p>
+    </div>
+
+    <div class="edit-area hidden" id="edit-area">
+        <h2>Editar Información</h2>
+        <h3>Reseña Histórica</h3>
+        <textarea id="historical-review-edit" rows="4" placeholder="Editar reseña histórica..."></textarea>
+        
+        <h3>Servicios</h3>
+        <textarea id="services-edit" rows="4" placeholder="Editar información de servicios..."></textarea>
+        
+        <h3>Contacto</h3>
+        <textarea id="contact-edit" rows="4" placeholder="Editar información de contacto..."></textarea>
+        
+        <h3>Grupos de Apoyo</h3>
+        <textarea id="groups-edit" rows="4" placeholder="Editar información de grupos..."></textarea>
+        
+        <button onclick="saveEdits()">Guardar Cambios</button>
+    </div>
+
+    <footer>
+        <p>© 2025 Hospital Dr. César Rodríguez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const USERNAME = "diogenesgvd"; // Usuario proporcionado
+        const PASSWORD = "12345678"; // Contraseña proporcionada
+
+        // Cargar información desde Local Storage
+        function loadInformation() {
+            const historicalReview = localStorage.getItem('historicalReview') || "El Hospital Dr. César Rodríguez fue fundado en 1950 con el objetivo de proporcionar atención médica de calidad a la comunidad.";
+            const servicesInfo = localStorage.getItem('servicesInfo') || "Ofrecemos una amplia gama de servicios médicos, incluyendo:\n- Urgencias\n- Pediatría\n- Ginecología\n- Cirugía General\n- Psicología";
+            const contactInfo = localStorage.getItem('contactInfo') || "Para más información, contáctanos al siguiente número:";
+            const groupsInfo = localStorage.getItem('groupsInfo') || "Contamos con grupos de apoyo para diversas necesidades, incluyendo:\n- Apoyo psicológico\n- Grupos de pacientes crónicos\n- Asesoramiento familiar";
+
+            document.getElementById('historical-review').innerText = historicalReview;
+            document.getElementById('services-info').innerText = servicesInfo;
+            document.getElementById('contact-info').innerText = contactInfo;
+            document.getElementById('groups-info').innerText = groupsInfo;
+        }
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('login').style.display = 'block';
+        }
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === USERNAME && password === PASSWORD) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('edit-area').classList.remove('hidden');
+
+                // Cargar los valores actuales en los campos de edición
+                document.getElementById('historical-review-edit').value = document.getElementById('historical-review').innerText;
+                document.getElementById('services-edit').value = document.getElementById('services-info').innerText;
+                document.getElementById('contact-edit').value = document.getElementById('contact-info').innerText;
+                document.getElementById('groups-edit').value = document.getElementById('groups-info').innerText;
+
+                document.getElementById('login-message').classList.add('hidden');
+            } else {
+                document.getElementById('login-message').innerText = "Usuario o contraseña incorrectos.";
+                document.getElementById('login-message').classList.remove('hidden');
+            }
+        }
+
+        function saveEdits() {
+            // Obtener los nuevos valores de los campos de edición
+            const newHistoricalReview = document.getElementById('historical-review-edit').value;
+            const newServicesInfo = document.getElementById('services-edit').value;
+            const newContactInfo = document.getElementById('contact-edit').value;
+            const newGroupsInfo = document.getElementById('groups-edit').value;
+
+            // Actualizar el contenido de las secciones correspondientes
+            document.getElementById('historical-review').innerText = newHistoricalReview;
+            document.getElementById('services-info').innerText = newServicesInfo;
+            document.getElementById('contact-info').innerText = newContactInfo;
+            document.getElementById('groups-info').innerText = newGroupsInfo;
+
+            // Guardar cambios en Local Storage
+            localStorage.setItem('historicalReview', newHistoricalReview);
+            localStorage.setItem('servicesInfo', newServicesInfo);
+            localStorage.setItem('contactInfo', newContactInfo);
+            localStorage.setItem('groupsInfo', newGroupsInfo);
+
+            alert("Cambios guardados exitosamente.");
+        }
+
+        // Cargar información al iniciar la página
+        loadInformation();
+        // Muestra la sección de inicio por defecto
+        showSection('inicio');
+    </script>
+
+
+</body></html>
